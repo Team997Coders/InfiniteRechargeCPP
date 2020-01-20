@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="14.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="linuxathenaDebug|Win32">
+      <Configuration>linuxathenaDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="linuxathenaRelease|Win32">
+      <Configuration>linuxathenaRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="windowsx86-64Debug|Win32">
+      <Configuration>windowsx86-64Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="windowsx86-64Release|Win32">
+      <Configuration>windowsx86-64Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectGUID>{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}</ProjectGUID>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='windowsx86-64Release|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <OutDir>.vs\frcUserProgramExe\$(Configuration)</OutDir>
+    <IntDir>.vs\frcUserProgramExe\$(Configuration)</IntDir>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='windowsx86-64Debug|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <OutDir>.vs\frcUserProgramExe\$(Configuration)</OutDir>
+    <IntDir>.vs\frcUserProgramExe\$(Configuration)</IntDir>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='linuxathenaRelease|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <OutDir>.vs\frcUserProgramExe\$(Configuration)</OutDir>
+    <IntDir>.vs\frcUserProgramExe\$(Configuration)</IntDir>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='linuxathenaDebug|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <OutDir>.vs\frcUserProgramExe\$(Configuration)</OutDir>
+    <IntDir>.vs\frcUserProgramExe\$(Configuration)</IntDir>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="NMakeConfiguration" Condition="'$(Configuration)|$(Platform)'=='windowsx86-64Release|Win32'">
+    <NMakeBuildCommandLine>"gradlew.bat" :installFrcUserProgramWindowsx86-64ReleaseExecutable</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"gradlew.bat" :clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"gradlew.bat" :clean :installFrcUserProgramWindowsx86-64ReleaseExecutable</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions></NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>src\main\include;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d363cdf61d86c890fca97d3ca7769dac\wpilibc-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\1751962ffce27a8d4203ce8b1c8d1b1c\ntcore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\66344cf4451428bf99b655f4a59c8720\hal-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\bc7bbcf9b5bef157835b1de07025902d\wpiutil-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d4b4847500e96b3ad7007850ed242260\cameraserver-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\61e5a53a08270910c8f03870b0eec7da\cscore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\4eda109880e9a5c400aa8c41f2847637\wpiapi-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\62cdcce974ff603146f52cff527d066d\api-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\35d3d45849b0cd6028de51421dc97ee8\cci-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\3411c9c102a36d193a44c5fe34baa306\diagnostics-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f9952aae94b33280db8db22068b6bb96\canutils-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\feb1036aec4fee1d8de4be9285a47195\platform-stub-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\502a0b680521f3c24d9c70205c53c3bf\core-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\ac093c3f71dae89fb7b64aa90edaeafa\wpilibNewCommands-cpp-2020.2.2-headers</NMakeIncludeSearchPath>
+    <NMakeOutput>build\install\frcUserProgram\windowsx86-64\release\lib\frcUserProgram.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Label="NMakeConfiguration" Condition="'$(Configuration)|$(Platform)'=='windowsx86-64Debug|Win32'">
+    <NMakeBuildCommandLine>"gradlew.bat" :installFrcUserProgramWindowsx86-64DebugExecutable</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"gradlew.bat" :clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"gradlew.bat" :clean :installFrcUserProgramWindowsx86-64DebugExecutable</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions></NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>src\main\include;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d363cdf61d86c890fca97d3ca7769dac\wpilibc-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\1751962ffce27a8d4203ce8b1c8d1b1c\ntcore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\66344cf4451428bf99b655f4a59c8720\hal-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\bc7bbcf9b5bef157835b1de07025902d\wpiutil-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d4b4847500e96b3ad7007850ed242260\cameraserver-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\61e5a53a08270910c8f03870b0eec7da\cscore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\4eda109880e9a5c400aa8c41f2847637\wpiapi-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\62cdcce974ff603146f52cff527d066d\api-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\35d3d45849b0cd6028de51421dc97ee8\cci-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\3411c9c102a36d193a44c5fe34baa306\diagnostics-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f9952aae94b33280db8db22068b6bb96\canutils-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\feb1036aec4fee1d8de4be9285a47195\platform-stub-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\502a0b680521f3c24d9c70205c53c3bf\core-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\ac093c3f71dae89fb7b64aa90edaeafa\wpilibNewCommands-cpp-2020.2.2-headers</NMakeIncludeSearchPath>
+    <NMakeOutput>build\install\frcUserProgram\windowsx86-64\debug\lib\frcUserProgram.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Label="NMakeConfiguration" Condition="'$(Configuration)|$(Platform)'=='linuxathenaRelease|Win32'">
+    <NMakeBuildCommandLine>"gradlew.bat" :installFrcUserProgramLinuxathenaReleaseExecutable</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"gradlew.bat" :clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"gradlew.bat" :clean :installFrcUserProgramLinuxathenaReleaseExecutable</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions></NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>src\main\include;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d363cdf61d86c890fca97d3ca7769dac\wpilibc-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\1751962ffce27a8d4203ce8b1c8d1b1c\ntcore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\66344cf4451428bf99b655f4a59c8720\hal-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\bc7bbcf9b5bef157835b1de07025902d\wpiutil-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f706b5d5cd4bcea038ba587a522740f2\chipobject-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\5534c65e0992107bcb0c55bf86146863\netcomm-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\74bb0c258eb3df4b65691e2162a6f51e\visa-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d4b4847500e96b3ad7007850ed242260\cameraserver-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\61e5a53a08270910c8f03870b0eec7da\cscore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\4eda109880e9a5c400aa8c41f2847637\wpiapi-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\62cdcce974ff603146f52cff527d066d\api-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\35d3d45849b0cd6028de51421dc97ee8\cci-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\3411c9c102a36d193a44c5fe34baa306\diagnostics-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f9952aae94b33280db8db22068b6bb96\canutils-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\feb1036aec4fee1d8de4be9285a47195\platform-stub-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\502a0b680521f3c24d9c70205c53c3bf\core-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\ac093c3f71dae89fb7b64aa90edaeafa\wpilibNewCommands-cpp-2020.2.2-headers</NMakeIncludeSearchPath>
+    <NMakeOutput>build\install\frcUserProgram\linuxathena\release\lib\frcUserProgram</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Label="NMakeConfiguration" Condition="'$(Configuration)|$(Platform)'=='linuxathenaDebug|Win32'">
+    <NMakeBuildCommandLine>"gradlew.bat" :installFrcUserProgramLinuxathenaDebugExecutable</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>"gradlew.bat" :clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>"gradlew.bat" :clean :installFrcUserProgramLinuxathenaDebugExecutable</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions></NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>src\main\include;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d363cdf61d86c890fca97d3ca7769dac\wpilibc-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\1751962ffce27a8d4203ce8b1c8d1b1c\ntcore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\66344cf4451428bf99b655f4a59c8720\hal-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\bc7bbcf9b5bef157835b1de07025902d\wpiutil-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f706b5d5cd4bcea038ba587a522740f2\chipobject-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\5534c65e0992107bcb0c55bf86146863\netcomm-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\74bb0c258eb3df4b65691e2162a6f51e\visa-2020.10.1-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\d4b4847500e96b3ad7007850ed242260\cameraserver-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\61e5a53a08270910c8f03870b0eec7da\cscore-cpp-2020.2.2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\eed3931469ba7efc2e953f8f3443a673\opencv-cpp-3.4.7-2-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\4eda109880e9a5c400aa8c41f2847637\wpiapi-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\62cdcce974ff603146f52cff527d066d\api-cpp-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\35d3d45849b0cd6028de51421dc97ee8\cci-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\3411c9c102a36d193a44c5fe34baa306\diagnostics-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\f9952aae94b33280db8db22068b6bb96\canutils-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\feb1036aec4fee1d8de4be9285a47195\platform-stub-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\502a0b680521f3c24d9c70205c53c3bf\core-5.17.6-headers;C:\Users\hunte\.gradle\caches\transforms-2\files-2.1\ac093c3f71dae89fb7b64aa90edaeafa\wpilibNewCommands-cpp-2020.2.2-headers</NMakeIncludeSearchPath>
+    <NMakeOutput>build\install\frcUserProgram\linuxathena\debug\lib\frcUserProgram</NMakeOutput>
+  </PropertyGroup>
+  <ItemGroup Label="Sources">
+    <ClCompile Include="src\main\cpp\OI.cpp"/>
+    <ClCompile Include="src\main\cpp\pathfollower\Path.cpp"/>
+    <ClCompile Include="src\main\cpp\Robot.cpp"/>
+    <ClCompile Include="src\main\cpp\subsystems\Drivetrain.cpp"/>
+    <ClCompile Include="build.gradle"/>
+  </ItemGroup>
+  <ItemGroup Label="Headers">
+    <ClInclude Include="src\main\include\Constants.h"/>
+    <ClInclude Include="src\main\include\OI.h"/>
+    <ClInclude Include="src\main\include\pathfollower\Path.h"/>
+    <ClInclude Include="src\main\include\Robot.h"/>
+    <ClInclude Include="src\main\include\subsystems\Drivetrain.h"/>
+  </ItemGroup>
+  <ItemGroup Label="References"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+</Project>

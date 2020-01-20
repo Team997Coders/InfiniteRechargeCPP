@@ -1,7 +1,8 @@
 plugins {
+    id 'visual-studio'
     id "cpp"
     id "google-test-test-suite"
-    id "edu.wpi.first.GradleRIO" version "2020.1.2"
+    id "edu.wpi.first.GradleRIO" version "2020.2.2"
 }
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
@@ -13,7 +14,7 @@ deploy {
             // or from command line. If not found an exception will be thrown.
             // You can use getTeamOrDefault(team) instead of getTeamNumber if you
             // want to store a team number in this file.
-            team = frc.getTeamNumber()
+            team = frc.getTeamOrDefault(997)
         }
     }
     artifacts {
@@ -41,7 +42,7 @@ deploy {
 def includeSrcInIncludeRoot = false
 
 // Set this to true to enable desktop support.
-def includeDesktopSupport = false
+def includeDesktopSupport = true
 
 // Enable simulation gui support. Must check the box in vscode to enable support
 // upon debugging

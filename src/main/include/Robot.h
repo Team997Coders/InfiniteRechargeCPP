@@ -8,12 +8,15 @@
 #pragma once
 
 #include <frc/TimedRobot.h>
-#include <frc2/command/Command.h>
+#include <frc/smartdashboard/SmartDashboard.h>
+#include <frc/smartdashboard/SendableChooser.h>
 
-#include "RobotContainer.h"
+#include "subsystems/Drivetrain.h"
+#include "OI.h"
+#include "pathfollower/Path.h"
 
 class Robot : public frc::TimedRobot {
- public:
+public:
   void RobotInit() override;
   void RobotPeriodic() override;
   void DisabledInit() override;
@@ -24,10 +27,15 @@ class Robot : public frc::TimedRobot {
   void TeleopPeriodic() override;
   void TestPeriodic() override;
 
- private:
-  // Have it null by default so that if testing teleop it
-  // doesn't have undefined behavior and potentially crash.
-  frc2::Command* m_autonomousCommand = nullptr;
+  enum AutoRoutine {
+    None = -1,
+    SickOm0de = 0
+  };
 
-  RobotContainer m_container;
+  frc::SendableChooser<AutoRoutine> mChooser;
+  AutoRoutine mSelectedRoutine;
+
+private:
+  int AutoState = 0;
+  int TeleopState = 0;
 };
