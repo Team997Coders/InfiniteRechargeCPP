@@ -21,9 +21,11 @@ void Robot::AutonomousInit() {
 void Robot::AutonomousPeriodic() {
   switch (mSelectedRoutine) {
     case AutoRoutine::SickOm0de :
-      static Path myPath = 
+      static Path myPath = Path("AHHH");
       if (AutoState == 0) {
-
+        static double leftVelocity, rightVelocity;
+        static 
+        Drivetrain::GetInstance().SetVelocityOutput();
       }
   }
 }

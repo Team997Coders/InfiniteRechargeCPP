@@ -17,6 +17,8 @@ public:
   void SetPercentOutput(double left, double right);
   void SetVelocityOutput(double left, double right);
 
+  void SetNeutralMode(NeutralMode&& mode);
+
   static Drivetrain& GetInstance() {
     static Drivetrain instance;
     return instance;

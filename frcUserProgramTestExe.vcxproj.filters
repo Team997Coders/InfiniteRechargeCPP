@@ -15,6 +15,9 @@
     <ClCompile Include="src\test\cpp\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\main\cpp\controllers\TeleopController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\main\cpp\OI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,6 +36,9 @@
   </ItemGroup>
   <ItemGroup Label="Headers">
     <ClInclude Include="src\main\include\Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\include\controllers\TeleopController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\main\include\OI.h">

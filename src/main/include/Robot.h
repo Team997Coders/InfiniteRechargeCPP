@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <string>
+
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/smartdashboard/SendableChooser.h>

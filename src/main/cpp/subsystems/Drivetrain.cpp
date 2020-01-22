@@ -45,3 +45,8 @@ void Drivetrain::SetVelocityOutput(double left, double right) {
   l1.Set(ControlMode::Velocity, left);
   r1.Set(ControlMode::Velocity, right);
 }
+
+void Drivetrain::SetNeutralMode(NeutralMode&& mode) {
+  l1.SetNeutralMode(mode);
+  r1.SetNeutralMode(mode);
+}

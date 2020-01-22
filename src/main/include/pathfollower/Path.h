@@ -1,6 +1,8 @@
 #ifndef ROBOT_PATH
 #define ROBOT_PATH
 
+#include <string>
+
 #include <frc/trajectory/TrajectoryUtil.h>
 #include <frc/trajectory/Trajectory.h>
 #include <frc/kinematics/DifferentialDriveWheelSpeeds.h>
@@ -18,7 +20,7 @@ private:
   frc::Trajectory::State tCurrentState;
   frc::ChassisSpeeds tChassisSpeed;
 public:
-  Path(const char* name);
+  Path(std::string name);
 
   frc::DifferentialDriveWheelSpeeds GetStateSpeed(double time);
   double GetTrajectoryTravelTime();

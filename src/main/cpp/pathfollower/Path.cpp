@@ -1,7 +1,7 @@
 #include "pathfollower/Path.h"
 
-Path::Path(const char* name) {
-	mTraj = frc::TrajectoryUtil::FromPathweaverJson();
+Path::Path(std::string name) {
+	mTraj = frc::TrajectoryUtil::FromPathweaverJson("/home/lvuser/deploy/paths/output/" + name + ".wpilib.json");
 }
 
 frc::DifferentialDriveWheelSpeeds Path::GetStateSpeed(double time) {
