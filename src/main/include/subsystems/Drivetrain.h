@@ -8,14 +8,15 @@
 class Drivetrain {
 private:
   Drivetrain();
+  ~Drivetrain();
 
-  TalonFX l1 = TalonFX(Constants::Ports::DRIVE_LEFT_1);
-  TalonFX l2 = TalonFX(Constants::Ports::DRIVE_LEFT_2);
-  TalonFX r1 = TalonFX(Constants::Ports::DRIVE_RIGHT_1);
-  TalonFX r2 = TalonFX(Constants::Ports::DRIVE_RIGHT_2);
+  TalonFX *mLeft1;
+  TalonFX *mLeft2;
+  TalonFX *mRight1;
+  TalonFX *mRight2;
 public:
-  void SetPercentOutput(double left, double right);
-  void SetVelocityOutput(double left, double right);
+  void SetSpeed(double left, double right);
+  void SetVelocity(double left, double right);
 
   void SetNeutralMode(NeutralMode&& mode);
 

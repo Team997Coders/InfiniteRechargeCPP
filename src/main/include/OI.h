@@ -6,11 +6,15 @@
 
 class OI {
 private:
-  frc::XboxController gamepad1;
-public:
   OI();
+  ~OI();
 
-  double getAxis(int port);
+  frc::XboxController* gamepad1;
+  frc::XboxController* gamepad2;
+public:
+
+  frc::XboxController& GetDriver();
+  frc::XboxController& GetOperator();
 
   static OI& GetInstance() {
     static OI instance;

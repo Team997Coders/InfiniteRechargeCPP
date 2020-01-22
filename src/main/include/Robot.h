@@ -13,8 +13,8 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/smartdashboard/SendableChooser.h>
 
-#include "subsystems/Drivetrain.h"
-#include "OI.h"
+#include "controllers/TeleopController.h"
+#include "controllers/AutoController.h"
 #include "pathfollower/Path.h"
 
 class Robot : public frc::TimedRobot {
@@ -29,15 +29,8 @@ public:
   void TeleopPeriodic() override;
   void TestPeriodic() override;
 
-  enum AutoRoutine {
-    None = -1,
-    SickOm0de = 0
-  };
+  TeleopController* mTeleopController;
+  AutoController* mAutoController;
 
-  frc::SendableChooser<AutoRoutine> mChooser;
-  AutoRoutine mSelectedRoutine;
-
-private:
-  int AutoState = 0;
-  int TeleopState = 0;
+  frc::SendableChooser<AutoController::AutoRoutine> mChooser;
 };

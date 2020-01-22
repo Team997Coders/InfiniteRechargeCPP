@@ -3,8 +3,11 @@
 void Robot::RobotInit() {
   Drivetrain::GetInstance();
 
-  mChooser.SetDefaultOption("None", AutoRoutine::None);
-  mChooser.AddOption("SickOm0de", AutoRoutine::SickOm0de);
+  mAutoController = &AutoController::GetInstance();
+  mTeleopController = &TeleopController::GetInstance();
+
+  mChooser.SetDefaultOption("None", AutoController::AutoRoutine::None);
+  mChooser.AddOption("SickOm0de", AutoController::AutoRoutine::SickOm0de);
 }
 
 void Robot::RobotPeriodic() { frc2::CommandScheduler::GetInstance().Run(); }
@@ -14,26 +17,20 @@ void Robot::DisabledInit() { }
 void Robot::DisabledPeriodic() { }
 
 void Robot::AutonomousInit() {
-  mSelectedRoutine = mChooser.GetSelected();
-  AutoState = 0;
+  mAutoController->mSelectedAuto = mChooser.GetSelected();
+  mAutoController->Init();
 }
 
 void Robot::AutonomousPeriodic() {
-  switch (mSelectedRoutine) {
-    case AutoRoutine::SickOm0de :
-      static Path myPath = Path("AHHH");
-      if (AutoState == 0) {
-        static double leftVelocity, rightVelocity;
-        static 
-        Drivetrain::GetInstance().SetVelocityOutput();
-      }
-  }
+  mAutoController->Execute();
 }
 
-void Robot::TeleopInit() { }
+void Robot::TeleopInit() {
+  mTeleopController->Init();
+}
 
 void Robot::TeleopPeriodic() {
-  
+  mTeleopController->Execute();
 }
 
 void Robot::TestPeriodic() { }

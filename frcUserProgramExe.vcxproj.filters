@@ -12,6 +12,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup Label="Sources">
+    <ClCompile Include="src\main\cpp\controllers\AutoController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\main\cpp\controllers\TeleopController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -27,12 +30,24 @@
     <ClCompile Include="src\main\cpp\subsystems\Drivetrain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\main\cpp\subsystems\Hopper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main\cpp\subsystems\Intake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main\cpp\subsystems\Shooter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="build.gradle">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup Label="Headers">
     <ClInclude Include="src\main\include\Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\include\controllers\AutoController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\main\include\controllers\TeleopController.h">
@@ -48,6 +63,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\main\include\subsystems\Drivetrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\include\subsystems\Hopper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\include\subsystems\Intake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main\include\subsystems\Shooter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

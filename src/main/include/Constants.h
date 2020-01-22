@@ -1,49 +1,52 @@
-/*----------------------------------------------------------------------------*/
-/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
-/* Open Source Software - may be modified and shared by FRC teams. The code   */
-/* must be accompanied by the FIRST BSD license file in the root directory of */
-/* the project.                                                               */
-/*----------------------------------------------------------------------------*/
-
 #pragma once
 
 namespace Constants {
 
-struct Gains {
+  struct Gains {
 
-  double P, I, D, F;
-  Gains(double p, double i, double d, double f): P(p), I(i), D(d), F(f) { }
+    double P, I, D, F;
+    Gains(double p, double i, double d, double f): P(p), I(i), D(d), F(f) { }
 
-};
+  };
 
-namespace Operations {
+  namespace Operations {
 
-  auto f2m = [](double meters) -> double { return meters * 3.281; };
-  auto m2f = [](double feet) -> double { return feet / 3.281; };
+    auto f2m = [](double meters) -> double { return meters * 3.281; };
+    auto m2f = [](double feet) -> double { return feet / 3.281; };
 
-}
+  }
 
-namespace Ports {
+  namespace Ports {
 
-  static const int
-    
-    DRIVE_LEFT_1 = 3,
-    DRIVE_LEFT_2 = 4,
-    DRIVE_RIGHT_1 = 1,
-    DRIVE_RIGHT_2 = 2;
+    static const int
 
-}
+      DRIVE_LEFT_1 = 3,
+      DRIVE_LEFT_2 = 4,
+      DRIVE_RIGHT_1 = 1,
+      DRIVE_RIGHT_2 = 2,
 
-namespace Values {
+      SHOOTER_MOTOR_1 = 5,
+      SHOOTER_MOTOR_2 = 6,
 
-  static const double
+      INTAKE_MOTOR = 7,
+      INTAKE_DETECTOR = 0,
 
-    DRIVE_WHEELBASE = 2.1; // Feet
+      HOPPER_MOTOR_1 = 8,
+      HOPPER_MOTOR_2 = 9;
 
-  static const Gains
+  }
 
-    DRIVE_VELOCITY_GAINS = Gains(0.13, 0.0, 3.0, 1023.0 / 19990.0);
+  namespace Values {
 
-}
+    static const double
+
+      DRIVE_WHEELBASE = 2.1; // Feet
+
+    static const Gains
+
+      DRIVE_VELOCITY_GAINS = Gains(0.13, 0.0, 3.0, 1023.0 / 19990.0),
+      SHOOTER_VELOCITY_GAINS = Gains(0.25, 0.0, 0.0, 1 / 4200); // Gonna have to adjust all of these
+
+  }
 
 }

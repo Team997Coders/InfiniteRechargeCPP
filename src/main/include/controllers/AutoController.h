@@ -1,27 +1,32 @@
-#ifndef ROBOT_TELEOPCONTROLLER
-#define ROBOT_TELEOPCONTROLLER
+#ifndef ROBOT_AUTOCONTROLLER
+#define ROBOT_AUTOCONTROLLER
 
 #include "subsystems/Drivetrain.h"
 #include "subsystems/Hopper.h"
 #include "subsystems/Intake.h"
 #include "subsystems/Shooter.h"
-#include "OI.h"
 
-class TeleopController {
+class AutoController {
 private:
-	TeleopController();
+	AutoController();
 
 	Drivetrain* mDrivetrain;
 	Intake* mIntake;
 	Hopper* mHopper;
 	Shooter* mShooter;
-	OI* mOI;
 public:
 	void Init();
 	void Execute();
 
-	static TeleopController& GetInstance() {
-		static TeleopController instance;
+	enum AutoRoutine {
+		None = -1,
+		SickOm0de = 0
+	};
+
+	AutoRoutine mSelectedAuto;
+
+	static AutoController& GetInstance() {
+		static AutoController instance;
 		return instance;
 	}
 };
