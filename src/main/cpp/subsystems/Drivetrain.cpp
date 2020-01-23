@@ -58,9 +58,15 @@ void Drivetrain::SetSpeed(double left, double right) {
   mRight1->Set(ControlMode::PercentOutput, right);
 }
 
-void Drivetrain::SetVelocity(double left, double right) {
-  mLeft1->Set(ControlMode::Velocity, left);
-  mRight1->Set(ControlMode::Velocity, right);
+void Drivetrain::SetVelocity(double left, double right, bool nativeUnits) {
+  if (nativeUnits) {
+    mLeft1->Set(ControlMode::Velocity, left);
+    mRight1->Set(ControlMode::Velocity, right);
+  }
+  else {
+    mLeft1->Set(ControlMode::Velocity, left / Constants::Values::DRIVE_VEL_2_FEET);
+    mRight1->Set(ControlMode::Velocity, right / Constants::Values::DRIVE_VEL_2_FEET);
+  }
 }
 
 void Drivetrain::SetNeutralMode(NeutralMode&& mode) {

@@ -2,9 +2,9 @@
 
 AutoController::AutoController() {
 	mDrivetrain = &Drivetrain::GetInstance();
-	mIntake = &Intake::GetInstance();
-	mHopper = &Hopper::GetInstance();
-	mShooter = &Shooter::GetInstance();
+	//mIntake = &Intake::GetInstance();
+	//mHopper = &Hopper::GetInstance();
+	//mShooter = &Shooter::GetInstance();
 }
 
 void AutoController::Init() {

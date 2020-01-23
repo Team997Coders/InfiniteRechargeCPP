@@ -40,7 +40,9 @@ namespace Constants {
 
     static const double
 
-      DRIVE_WHEELBASE = 2.1; // Feet
+      DRIVE_WHEELBASE = 2.1, // Feet
+      DRIVE_VEL_2_FEET = 10 * ((double)1 / (double)2048)
+      * ((double)9 / (double)70) * ((double)5 * 3.14159) * ((double)1 / (double)12);
 
     static const Gains
 

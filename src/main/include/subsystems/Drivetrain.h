@@ -16,7 +16,7 @@ private:
   TalonFX *mRight2;
 public:
   void SetSpeed(double left, double right);
-  void SetVelocity(double left, double right);
+  void SetVelocity(double left, double right, bool nativeUnits);
 
   void SetNeutralMode(NeutralMode&& mode);
 

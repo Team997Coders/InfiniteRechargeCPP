@@ -1,9 +1,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
 
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frcUserProgramExe", "F:\hunte\git\InfiniteRechargeCPP\frcUserProgramExe.vcxproj", "{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frcUserProgramExe", "C:\Users\CHS Robotics\git\InfiniteRechargeCPP\frcUserProgramExe.vcxproj", "{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frcUserProgramTestExe", "F:\hunte\git\InfiniteRechargeCPP\frcUserProgramTestExe.vcxproj", "{595D6422-BD64-371E-B91D-E0C72A4F9849}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frcUserProgramTestExe", "C:\Users\CHS Robotics\git\InfiniteRechargeCPP\frcUserProgramTestExe.vcxproj", "{46A95B2A-B793-319E-B1B3-4C360083D8AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +13,20 @@ Global
 		windowsx86-64Release|Win32 = windowsx86-64Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.linuxathenaDebug|Win32.ActiveCfg = linuxathenaDebug|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.linuxathenaDebug|Win32.Build.0 = linuxathenaDebug|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.linuxathenaRelease|Win32.ActiveCfg = linuxathenaRelease|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.linuxathenaRelease|Win32.Build.0 = linuxathenaRelease|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.windowsx86-64Debug|Win32.ActiveCfg = windowsx86-64Debug|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.windowsx86-64Debug|Win32.Build.0 = windowsx86-64Debug|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.windowsx86-64Release|Win32.ActiveCfg = windowsx86-64Release|Win32
-		{BF169D3E-DD9A-3AE9-91F7-56E5037A16D4}.windowsx86-64Release|Win32.Build.0 = windowsx86-64Release|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.linuxathenaDebug|Win32.ActiveCfg = windowsx86-64Release|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.linuxathenaRelease|Win32.ActiveCfg = windowsx86-64Release|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.windowsx86-64Debug|Win32.ActiveCfg = windowsx86-64Debug|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.windowsx86-64Debug|Win32.Build.0 = windowsx86-64Debug|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.windowsx86-64Release|Win32.ActiveCfg = windowsx86-64Release|Win32
-		{595D6422-BD64-371E-B91D-E0C72A4F9849}.windowsx86-64Release|Win32.Build.0 = windowsx86-64Release|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.linuxathenaDebug|Win32.ActiveCfg = linuxathenaDebug|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.linuxathenaDebug|Win32.Build.0 = linuxathenaDebug|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.linuxathenaRelease|Win32.ActiveCfg = linuxathenaRelease|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.linuxathenaRelease|Win32.Build.0 = linuxathenaRelease|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.windowsx86-64Debug|Win32.ActiveCfg = windowsx86-64Debug|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.windowsx86-64Debug|Win32.Build.0 = windowsx86-64Debug|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.windowsx86-64Release|Win32.ActiveCfg = windowsx86-64Release|Win32
+		{58B6AC1F-8E4B-3BD0-98F4-DE0DFB75F451}.windowsx86-64Release|Win32.Build.0 = windowsx86-64Release|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.linuxathenaDebug|Win32.ActiveCfg = windowsx86-64Release|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.linuxathenaRelease|Win32.ActiveCfg = windowsx86-64Release|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.windowsx86-64Debug|Win32.ActiveCfg = windowsx86-64Debug|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.windowsx86-64Debug|Win32.Build.0 = windowsx86-64Debug|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.windowsx86-64Release|Win32.ActiveCfg = windowsx86-64Release|Win32
+		{46A95B2A-B793-319E-B1B3-4C360083D8AE}.windowsx86-64Release|Win32.Build.0 = windowsx86-64Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

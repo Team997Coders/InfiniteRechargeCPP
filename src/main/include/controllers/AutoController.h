@@ -11,9 +11,9 @@ private:
 	AutoController();
 
 	Drivetrain* mDrivetrain;
-	Intake* mIntake;
-	Hopper* mHopper;
-	Shooter* mShooter;
+	//Intake* mIntake;
+	//Hopper* mHopper;
+	//Shooter* mShooter;
 public:
 	void Init();
 	void Execute();
